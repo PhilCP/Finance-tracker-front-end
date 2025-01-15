@@ -1,0 +1,42 @@
+.adaptable {
+  text-align: center;
+  padding: 4rem;
+}
+
+.adaptable h2 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.adaptable-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.adaptable-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -20px;
+}
+
+.adaptable-card .icon {
+  font-size: 2rem;
+  color: #D24D84;
+  margin-bottom: 1rem;
+}
+
+.adaptable-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.adaptable-card p {
+  color: var(--text-color);
+}

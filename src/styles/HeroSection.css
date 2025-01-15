@@ -1,0 +1,155 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #303545;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.hero-content {
+  max-width: 50%; /* Keep text content at 50% on large screens */
+  flex: 1; /* Allow flexibility for smaller screens */
+  
+}
+
+.hero-content h1 {
+  font-size: 3.3rem; /* Default large size */
+  color: white;
+  font-family: DM Serif Text;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+
+.hero-content .highlight {
+  color: #D24D84;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+  font-size: 1.0rem;
+  color: white;
+  font-family: 'Poppins';
+  line-height: 1.5; /* Improved readability */
+  margin-left: 50px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of buttons */
+  gap: 1rem;
+  margin-top: 40px;
+}
+
+.get-started-btn, .tour-btn {
+  padding: 0.8rem 2.1rem;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-left: 50px;
+}
+
+.get-started-btn {
+  background-color: #D24D84;
+  color: white;
+}
+
+.tour-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid var(--primary-color); /* Ensure border is visible */
+}
+
+.hero-image {
+  flex-shrink: 0;
+  width: 50%; /* Default image width */
+  height: auto;
+}
+
+.hero-image img {
+  width: 100%; /* Ensure image fills the container */
+  height: auto;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+/* Line-break class for text */
+.line-break {
+  display: block;
+  margin-top: 10px;
+}
+
+/* RESPONSIVENESS */
+
+/* Small screens (tablets and phones) */
+@media screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items */
+    text-align: center;
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  .hero-content {
+    max-width: 90%; /* Allow text content to occupy more space */
+    margin-left: 0; /* Center content */
+    margin-top: 20px; /* Adjust spacing */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Reduce heading size */
+    margin-top: 20px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* Smaller text for smaller screens */
+    margin-left: 0;
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Center buttons */
+    margin-left: 0;
+  }
+
+  .get-started-btn, .tour-btn {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 0.6rem 1.5rem; /* Smaller padding */
+  }
+
+  .hero-image {
+    width: 80%; /* Adjust image size */
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+/* Very small screens (phones) */
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .hero-content p {
+    font-size: 0.8rem; /* Adjust text size */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem;
+  }
+
+  .get-started-btn, .tour-btn {
+    width: 100%; /* Make buttons full-width */
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%; /* Full width for smaller devices */
+  }
+}

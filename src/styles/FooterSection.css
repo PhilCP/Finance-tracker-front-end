@@ -1,0 +1,112 @@
+/* Footer Styles */
+.footer {
+  background-color: #303545;
+  color: #fff;
+  padding: 10px 20px; /* Reduced padding */
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Center within the container */
+  max-width: 1200px; /* Limit width */
+}
+
+.footer-top h3 {
+  font-size: 16px; /* Reduced font size */
+}
+
+.help-center-button {
+  background-color: #D24D84;
+  color: white;
+  padding: 8px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 12px; /* Reduced font size */
+}
+
+/* Foggy and nearly invisible line */
+.blurring-line {
+  border: none;
+  height: 2px; /* Reduced line thickness */
+  background: rgba(255, 255, 255, 0.05); /* Extremely low opacity */
+  margin: 10px 0; /* Reduced margin */
+  width: 80%; /* Center within the container */
+  max-width: 1200px; /* Limit width */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* More blur for a foggy effect */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Reduced space between sections */
+  width: 80%; /* Center within the container */
+  max-width: 1200px; /* Limit width */
+}
+
+.footer-column {
+  text-align: left;
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-size: 14px; /* Reduced font size */
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  font-size: 12px; /* Reduced font size */
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.small-line {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 8px 0; /* Reduced margin */
+}
+.footer-column a {
+  color: #fff; /* White color */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px; /* Reduced icon gap */
+  margin-top: 8px; /* Reduced margin */
+  font-size: 12px; /* Reduced font size */
+
+}
+
+.footer-bottom {
+  border-top: 1px solid #3a3b50;
+  margin-top: 15px; /* Reduced margin */
+  padding-top: 5px; /* Reduced padding */
+  font-size: 10px; /* Reduced font size */
+  text-align: center;
+  color: #bbb;
+  width: 80%; /* Center within the container */
+  max-width: 1200px; /* Limit width */
+}
+/* Style for the Terrvio link */
+.terrvio-link {
+  color: #D24D84; /* You can choose a color that suits your design */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold for better visibility */
+}
+
+.terrvio-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

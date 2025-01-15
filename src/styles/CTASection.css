@@ -1,0 +1,57 @@
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align text to the top */
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #303545;
+  color: white;
+  border-radius: 10px;
+}
+
+.cta-text {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif; /* Corrected the font-family */
+  line-height: 1.1;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  
+}
+
+.cta h2 .highlight {
+  color: #D24D84; /* Add highlight color */
+}
+
+
+
+.cta p {
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.cta-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align the button to the right */
+}
+
+.cta-btn {
+  background-color: #D24D84;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 40px;
+  padding-left: 15px;
+  margin-right: 35px;
+  align-items: center;
+}

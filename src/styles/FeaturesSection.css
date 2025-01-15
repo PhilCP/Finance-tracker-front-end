@@ -1,0 +1,71 @@
+.features {
+  text-align: center;
+  padding: 100px 20px; /* Adjusted padding to match the pricing container */
+  box-sizing: border-box;
+  border-radius: 0; /* Same as pricing container */
+  margin-bottom: 0; /* Remove extra space if needed */
+  background-color: white;
+}
+
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  background-color: #ffffff; /* Keep the same background as before */
+  padding: 20px; /* Adjusted padding */
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Same shadow as in pricing cards */
+  position: relative;
+  top: -20px; /* Optional, mimics the lift effect */
+}
+
+.feature-card .icon {
+  font-size: 2rem;
+  color: #D24D84;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-color);
+}
+
+.learn-more-container {
+  background-color: #d24d84;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.learn-more-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: #D24D84;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+.main-heading {
+  font-size: 2rem; /* Larger size for the first heading */
+  color: black; /* Adjust color as needed */
+  margin-bottom: .9rem;
+}
+.sub-heading {
+  font-size: 0.8rem; /* Adjust size for subheading */
+  color: #121212; /* Lighter color for the subheading */
+  margin-top: 0; /* No margin above */
+  margin-bottom: 4.3rem; /* Add spacing before the grid */
+}

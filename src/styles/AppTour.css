@@ -1,0 +1,52 @@
+.app-tour {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .app-tour h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .tour-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .back-to-home {
+    margin-top: 30px;
+  }
+  
+  .back-btn {
+    background-color: #D24D84;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .back-btn:hover {
+    opacity: 0.9;
+  }
+  

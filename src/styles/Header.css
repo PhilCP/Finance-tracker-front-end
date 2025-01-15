@@ -1,0 +1,195 @@
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #303545;
+  color: white;
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Align to the top of the page */
+  width: 100%; /* Ensure it spans the entire width of the page */
+  z-index: 1000; /* Ensure it stays above other content */
+  box-sizing: border-box; /* Prevent overflow */
+  transition: top 0.3s ease-in-out; /* Smooth transition for hiding/reappearing */
+}
+
+.header-hidden {
+  top: -100px; /* Move the header out of view when it's hidden */
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: none;
+  font-family: DM Serif Text;
+  margin-left: 50px;
+}
+
+.logo a {
+  color: white; /* Make the logo text white */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Centering the navigation items */
+.nav {
+  display: flex;
+  justify-content: center; /* This centers the ul in the available space */
+  flex: 1; /* Ensures the nav takes up the available width */
+  margin-left: 144px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Center the items vertically */
+  justify-content: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+  justify-content: center;
+}
+
+/* Right side (language switcher and buttons) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Reduced gap between buttons */
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  position: relative; /* Needed for positioning the dropdown */
+}
+
+.lang-switch img {
+  width: 20px;
+  border-radius: 10px;
+  height: 15px;
+  margin-right: 5px; /* Space between flag and text */
+}
+
+.lang-switch .dropdown-menu {
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 40px; /* Position it below the language switch button */
+  right: 0;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 5px;
+  width: 120px;
+  z-index: 10;
+}
+
+.lang-switch .dropdown-menu button {
+  background: transparent;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.lang-switch .dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.login-btn {
+  background-color: transparent; /* No background color */
+  border: none; /* Remove the border */
+  color: white; /* Set the text color to your desired color */
+  padding: 0.5rem 1rem; /* Keep the padding as it is */
+  font-size: 1rem; /* Font size remains the same */
+  cursor: pointer; /* Make the button clickable */
+  text-align: center; /* Align text to the center */
+  margin-right: 5px; /* Reduced margin to bring buttons closer */
+}
+
+.signup-btn {
+  background-color: #D24D84;
+  border-radius: 25px;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 0; /* Removed margin to prevent overflow */
+}
+
+/* Optional: Button hover effects */
+.login-btn:hover, .signup-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem; /* Reduce header padding on smaller screens */
+  }
+
+  .logo {
+    font-size: 1.25rem; /* Smaller logo on small screens */
+    margin-left: 20px;
+  }
+
+  .nav {
+    margin-left: 20px;
+    margin-right: 20px; /* Ensure the navigation stays within the container */
+  }
+
+  .header-right {
+    gap: 0.5rem; /* Reduced gap between buttons */
+  }
+
+  .login-btn, .signup-btn {
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.4rem 0.8rem; /* Adjust padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column; /* Stack header elements vertically */
+    align-items: flex-start;
+  }
+
+  .nav {
+    display: block; /* Show navigation links in a column */
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack the nav links vertically */
+    gap: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-right {
+    width: 100%; /* Make the header-right take full width */
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .login-btn, .signup-btn {
+    width: 100%; /* Make buttons full-width */
+    text-align: center;
+    margin-right: 0; /* No margin */
+  }
+}

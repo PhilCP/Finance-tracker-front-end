@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the title and subtitle with background */
+  .pricing-container {
+    background-color: #303545;
+    padding: 100px 20px 120px;
+    text-align: center;
+    margin-bottom: -40px;
+    border-radius: 0;
+  }
+
+  
+  .pricing-container h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: dm;
+  }
+  
+  /*  the second part of the title goes to the next line */
+  .pricing-container h1 .second-line {
+    display: block; /* Forces the text to move to the next line */
+    margin-top: 2px; /* Adds some space between the lines */
+    text-align: center; /* Center-align the second line */
+  }
+  
+  /* Highlight for "Perfect Fit" */
+  .pricing-container h1 .highlight {
+    color: #D24D84; /* Apply the highlight color */
+  }
+
+  .pricing-container p {
+    color: #ffffff; /* Make the text white */
+    font-size: 12px; /* You can adjust the size as needed */
+    margin-top: 10px;
+  }
+  
+  
+  /* Pricing Toggle Button Container Inside Pricing Container */
+
+ .pricing-toggle-container {
+  display: flex;
+  justify-content: center;
+  background-color: #282C3A;
+  padding:  5px 10px;;
+  border-radius: 25px; /* Rounded corners for the container */
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  top: -80px;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
+  margin-bottom:-1%;
+}
+
+/* Styles for Monthly button */
+.pricing-toggle button {
+  padding: 8px 20px;
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  color: white; /* Set text color */
+  font-size: 14px; /* Set font size */
+  cursor: pointer; /* Show pointer cursor */
+  text-decoration: none; /* Remove any underline from text */
+  
+ 
+}
+
+.pricing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the buttons */
+
+}
+  
+  .pricing-toggle button.active {
+    background-color: #303545;
+    border-radius: 25px;
+    
+  }
+  
+  /* Pricing Cards */
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    margin-top: -20px;
+  }
+  
+  .pricing-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  
+  .pricing-card h3 {
+    font-size: 20px;
+    color: #2e2e2e;
+    text-align: left;
+    margin-bottom: 10px;
+    
+  }
+  
+  .pricing-card p {
+    font-size: 14px;
+    color: #7d7d7d;
+    text-align: left;
+    margin-top: 0px;
+  }
+  
+  .pricing-card .price {
+    font-size: 32px;
+    color: #2e2e2e;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .pricing-card .price .main-price {
+    font-size: 25px;
+    color: #2e2e2e;
+  }
+  
+  .pricing-card .price .billed {
+    font-size: 12px; /* Make it smaller */
+    color: #7d7d7d; 
+    margin-top: 5px; /* Space between the price and the billed text */
+    text-align: left; /* Align to the left */
+    font-weight: 300; /* Light font weight */
+  }
+  
+  
+  /* Styling for Plan includes */
+  .pricing-card .plan-includes {
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .pricing-card .price-line {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    filter: blur(1px);
+    opacity: 0.5;
+  }
+  
+  .pricing-card .get-started {
+    padding: 10px 90px;
+    background-color: #D24D84;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .pricing-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  
+  .pricing-card .features li {
+    font-size: 14px;
+    color: #7d7d7d;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .pricing-card .features li::before {
+    content: '\2713';
+    color: black;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  /* Subscription Section */
+.subscription-section {
+  text-align: center;
+  padding: 20px 340px;
+  background-color: none;
+  margin: 40px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+  margin-left: 1px;
+}
+
+.subscription-section .subscribe-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  width: 100%; /* Use full width of the container */
+  justify-content: center; /* Center content horizontally */
+  max-width: 100%;
+  margin-left: 30px;
+ 
+}
+
+.subscription-section input {
+  padding: 10px 10px 10px 40px; /* Add space for the icon */
+  width: calc(100% - 120px); /* Make input take up space, leaving room for the button */
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-right: 60px;
+  font-size: 14px; 
+}
+
+.subscription-section .icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #7d7d7d;
+}
+
+.subscription-section button {
+  padding: 8px 20px;
+  background-color: #D24D84;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: -10px;
+  position: absolute; /* Position button inside the container */
+  right: 80px; /* Align button to the right inside the container */
+
+}
+
+.subscription-section .subscription-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.subscription-section .subscription-text span {
+  display: block;
+  margin-bottom: -8px;
+}
+
+.subscription-section .second-line {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.subscription-section p:last-of-type {
+  margin-top: 15px;
+  font-size: 12px;
+}
+@media (max-width: 480px) {
+  .pricing-container {
+    padding: 60px 20px 60px;
+  }
+
+  .pricing-container h1 {
+    font-size: 24px;
+  }
+
+  .pricing-toggle-container {
+    flex-direction: column;
+  }
+
+  .pricing-toggle button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .subscription-section input {
+    width: calc(100% - 40px);
+  }
+
+  .subscription-section button {
+    right: 20px;
+  }
+}

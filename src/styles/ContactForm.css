@@ -1,0 +1,161 @@
+.contact-form-section {
+  padding: 2.5rem;
+  background-color: white;
+  max-width: 1200px;
+  margin: 40px auto;
+  margin-bottom: 1px;
+  margin-top: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-form-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 47px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-heading {
+  color: #D24D84;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.form-section h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 1.5rem;
+  color: var(--secondary-color);
+}
+
+.inline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-group-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Adjusted spacing for better visual alignment */
+  flex: 1;
+  max-width: 400px; /* Restricts the maximum width of input fields */
+  width: 100%; /* Ensures responsiveness */
+}
+
+.form-group-inline label {
+  font-size: 0.7rem;
+  color: var(--text-color);
+}
+
+.form-group-inline input,
+.form-group-inline textarea {
+  border: none;
+  border-bottom: 1.2px solid #000000; /* Uniform underline thickness */
+  font-size: 0.9rem;
+  padding: 0;
+  line-height: 1.4;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+  max-width: 400px; /* Limits the length of the underline */
+  width: 100%; /* Ensures fields stay within their container */
+  box-sizing: border-box; /* Includes padding and border in width */
+}
+
+.form-group-inline input:focus,
+.form-group-inline textarea:focus {
+  border-bottom: 2px solid #D24D84; /* Highlight underline on focus */
+}
+
+.form-group-inline input::placeholder,
+.form-group-inline textarea::placeholder {
+  color: black;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+textarea {
+  resize: none; /* Prevents resizing of the textarea */
+}
+
+.send-btn {
+  background-color: #D24D84;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #C04376; /* Slightly darker shade for hover */
+}
+
+.terms {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.terms a {
+  color: #D24D84;
+  text-decoration: none;
+}
+
+.dropdown-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.dropdown-section select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 0.8rem;
+}
+
+.dropdown-section select:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    max-width: 100%;
+  }
+
+  .dropdown-section {
+    width: 100%;
+  }
+
+  .form-group-inline {
+    max-width: 100%; /* Makes input fields responsive for smaller screens */
+  }
+}
