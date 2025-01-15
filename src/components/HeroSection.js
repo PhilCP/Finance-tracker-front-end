@@ -16,7 +16,7 @@ const HeroSection = () => {
         </h1>
         <p>
           {t('Simplify your invoicing process by switching')} 
-          <span className="line-break">{t('to an easy-to-use system.')}</span> {/* This will go on a new line */}
+          <span className="line-break">{t('to an easy-to-use system.')}</span>
         </p>
         <div className="hero-buttons">
           <Link to="/SignUp">
