@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../styles/Header.css';
@@ -8,50 +8,43 @@ import Flag from 'react-world-flags';
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [headerVisible, setHeaderVisible] = useState(true);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang).then(() => {
-      setCurrentLanguage(lang);
-    });
+    i18n.changeLanguage(lang);
     setDropdownOpen(false);
   };
 
-  const handleScroll = useCallback(() => {
-    if (window.scrollY > lastScrollY) {
-      setHeaderVisible(false); // scrolling down
-    } else {
-      setHeaderVisible(true); // scrolling up
-    }
-    setLastScrollY(window.scrollY); // update last scroll position
+  // Scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsHidden(currentScrollY > lastScrollY);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [handleScroll]);
-
   return (
-    <header className={`header ${headerVisible ? '' : 'header-hidden'}`}>
+    <header className={`header ${isHidden ? 'header-hidden' : ''}`}>
       <div className="logo">
         <Link to="/">Quotnum</Link>
       </div>
       <nav className="nav">
         <ul>
           <li><Link to="/FeaturesSection">{t('FEATURES')}</Link></li>
-          <li><a href="/Pricing">{t('PRICING')}</a></li>
-          <li><a href="/ContactForm">{t('CONTACT US')}</a></li>
+          <li><Link to="/Pricing">{t('PRICING')}</Link></li>
+          <li><Link to="/ContactForm">{t('CONTACT_US')}</Link></li>
         </ul>
       </nav>
       <div className="header-right">
         <div className="lang-switch" onClick={toggleDropdown}>
-          <Flag code={currentLanguage === 'en' ? 'GB' : currentLanguage === 'fr' ? 'FR' : 'ES'} />
+          <Flag code={i18n.language === 'en' ? 'GB' : i18n.language === 'fr' ? 'FR' : 'ES'} />
           <FaAngleDown />
           {dropdownOpen && (
             <div className="dropdown-menu">
@@ -68,10 +61,10 @@ const Header = () => {
           )}
         </div>
         <Link to="/Login">
-          <button className="login-btn">Login</button>
+          <button className="login-btn">{t('LOGIN')}</button>
         </Link>
         <Link to="/SignUp">
-          <button className="signup-btn">Sign up, it’s Free</button>
+          <button className="signup-btn">{t('SIGN_UP')}</button>
         </Link>
       </div>
     </header>

@@ -11,12 +11,13 @@
   width: 100%; /* Ensure it spans the entire width of the page */
   z-index: 1000; /* Ensure it stays above other content */
   box-sizing: border-box; /* Prevent overflow */
-  transition: top 0.3s ease-in-out; /* Smooth transition for hiding/reappearing */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hiding/reappearing */
 }
 
 .header-hidden {
-  top: -100px; /* Move the header out of view when it's hidden */
+  transform: translateY(-100%); /* Move the header out of view */
 }
+
 
 .logo {
   font-size: 1.9rem;

@@ -1,37 +1,26 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import HttpApi from 'i18next-http-backend';
+import Backend from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
+  .use(Backend) // Loads translation files
+  .use(LanguageDetector) // Detects user language
   .use(initReactI18next)
-  .use(HttpApi)
   .init({
     fallbackLng: 'en',
-    lng: 'en', // Start language
+    lng: 'en', // Default language
+    debug: true,
     interpolation: {
-      escapeValue: false,
+      escapeValue: false
     },
     backend: {
-      loadPath: 'https://libretranslate.com/translate', // LibreTranslate API URL
-      requestOptions: {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: (options) => {
-          const { lng } = options;
-          return JSON.stringify({
-            q: '{{text}}', // Placeholder for text translation
-            source: 'en',
-            target: lng, // Target language dynamically set
-            format: 'text',
-          });
-        },
-      },
+      loadPath: '/locales/{{lng}}/translation.json'
     },
+    
     react: {
-      useSuspense: true, // Suspense for translations
-    },
+      useSuspense: true
+    }
   });
 
 export default i18n;

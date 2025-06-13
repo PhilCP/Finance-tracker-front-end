@@ -49,21 +49,15 @@
 .form-group-inline {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* Adjusted spacing for better visual alignment */
+  gap: 0.5rem;
   flex: 1;
-  max-width: 400px; /* Restricts the maximum width of input fields */
-  width: 100%; /* Ensures responsiveness */
+  max-width: 400px;
+  width: 100%;
 }
 
-.form-group-inline label {
-  font-size: 0.7rem;
-  color: var(--text-color);
-}
-
-.form-group-inline input,
-.form-group-inline textarea {
+.form-group-inline input {
   border: none;
-  border-bottom: 1.2px solid #000000; /* Uniform underline thickness */
+  border-bottom: 1.2px solid #000000;
   font-size: 0.9rem;
   padding: 0;
   line-height: 1.4;
@@ -71,25 +65,18 @@
   background: transparent;
   transition: border-color 0.3s ease;
   border-radius: 0;
-  max-width: 400px; /* Limits the length of the underline */
-  width: 100%; /* Ensures fields stay within their container */
-  box-sizing: border-box; /* Includes padding and border in width */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.form-group-inline input:focus,
-.form-group-inline textarea:focus {
-  border-bottom: 2px solid #D24D84; /* Highlight underline on focus */
+.form-group-inline input:focus {
+  border-bottom: 2px solid #D24D84;
 }
 
-.form-group-inline input::placeholder,
-.form-group-inline textarea::placeholder {
+.form-group-inline input::placeholder {
   color: black;
   font-size: 0.8rem;
   line-height: 1.2;
-}
-
-textarea {
-  resize: none; /* Prevents resizing of the textarea */
 }
 
 .send-btn {
@@ -106,7 +93,7 @@ textarea {
 }
 
 .send-btn:hover {
-  background-color: #C04376; /* Slightly darker shade for hover */
+  background-color: #C04376;
 }
 
 .terms {
@@ -119,43 +106,59 @@ textarea {
   text-decoration: none;
 }
 
-.dropdown-section {
+/* Accordion */
+.accordion-section {
   flex: 1;
+  max-width: 450px;
+}
+
+.accordion {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-}
-
-.dropdown-section select {
-  padding: 0.8rem;
-  font-size: 1rem;
+  gap: 6px;
+  width: 100%;
   border-radius: 25px;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 25px;
   background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-question {
+  padding: 10px 20px;
+  font-size: .9rem;
+  font-weight: bold;
   cursor: pointer;
-  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.dropdown-section select:focus {
-  border-bottom: 2px solid var(--primary-color);
+.accordion-answer {
+  padding: 0 20px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #555;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .contact-form-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.accordion-item.active .accordion-answer {
+  max-height: 120px;
+  padding: 15px 20px;
+}
 
-  .form-section {
-    max-width: 100%;
-  }
+.accordion-question span {
+  font-size: rem;
+  color: #333;
+}
 
-  .dropdown-section {
-    width: 100%;
-  }
-
-  .form-group-inline {
-    max-width: 100%; /* Makes input fields responsive for smaller screens */
-  }
+.accordion-item.active .accordion-question span {
+  color: #D24D84;
 }

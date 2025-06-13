@@ -9,10 +9,11 @@ const CTASection = () => {
   return (
     <section className="cta">
       <div className="cta-text">
-      <h2>
-  {t('Start sending')} <br/>
-   <span className="highlight">{t('Invoices')} </span><span>{t('today')}</span>
-</h2>
+        <h2>
+          {t('Start sending')} <br />
+          <span className="highlight">{t('Invoices')} </span>
+          <span>{t('today')}</span>
+        </h2>
 
         <p>{t('Find out how Quotnum helps you develop and manage your business.')}</p>
       </div>

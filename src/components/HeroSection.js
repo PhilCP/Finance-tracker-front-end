@@ -5,7 +5,7 @@ import '../styles/HeroSection.css';
 import heroImage from '../assets/hero-image.png';
 
 const HeroSection = () => {
-  const { t } = useTranslation();  // Make sure to use the translation hook
+  const { t } = useTranslation();  // to Make sure to use the translation hook
 
   return (
     <section className="hero">

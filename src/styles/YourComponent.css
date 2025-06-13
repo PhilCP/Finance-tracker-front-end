@@ -1,18 +1,19 @@
 .container {
     display: flex;
+    flex-direction: row-reverse; /* Reverse the order: text on the right, image on the left */
     align-items: center;
-    justify-content: center;  /* Center horizontally */
-    padding: 40px 20px; /* Increased padding for top and bottom */
-    margin: 40px auto; /* Center the container vertically with margin auto */
-    max-width: 1200px; /* Add a max-width to prevent the section from stretching too wide */
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
     width: 100%;
 }
 
 .text-section {
-    max-width: 60%; /* Limit text width to 60% of container */
-    padding-right: 150px; /* Add some spacing between text and image */
-    margin-right: 10%;;
-    margin-top: -140px;
+    max-width: 45%; /* Adjust width to ensure balance */
+    padding-left: 30px; /* Add left padding instead of right */
+    margin-left: 5%; /* Adjust margin for spacing */
+    margin-bottom: 40px;
 }
 
 .text-section h1 {
@@ -21,24 +22,29 @@
 }
 
 .highlight {
-    color: #D24D84; /* Light pink color */
+    color: #D24D84;
 }
 
 .text-section p {
     font-size: 1em;
     margin-top: 20px;
-    
+    line-height: 1.3;
+}
+.text-section p.lower br + span {
+    display: block; /* Make the span act as a block element */
+    margin-top: 20px; /* Add space after the <br> */
+    line-height: 1.3;
 }
 
 .image-placeholder {
-    width: 400px;
-    height: 350px;
+    width: 50%; /* Keep the image width balanced */
+    height: auto;
     background-color: white;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1px;
+    margin-top: -40px;
 }
 
 .image-placeholder img {
@@ -46,26 +52,21 @@
     max-height: 100%;
     border-radius: 10px;
 }
-.text-section p.lower {
-    margin-top: 50px; /* Move this specific paragraph lower */
-   
-}
 
-
-/* Add media query for smaller screens */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center content */
-        text-align: center; /* Center text on smaller screens */
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        text-align: center;
     }
 
     .text-section {
-        max-width: 90%; /* Allow text to take up more space on smaller screens */
+        max-width: 90%; /* Expand text width on smaller screens */
+        padding-left: 0;
+        margin-left: 0;
     }
 
     .image-placeholder {
-        width: 80%; /* Allow image to scale on small screens */
-        height: auto;
+        width: 80%; /* Adjust image width for smaller screens */
     }
 }
